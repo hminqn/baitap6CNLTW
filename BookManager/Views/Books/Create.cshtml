@@ -1,0 +1,4 @@
+@model Book
+@{ ViewData["Title"]="Thêm sách mới"; }
+<a class="back" asp-action="Index">← Danh mục sách</a><div class="page-heading"><div><div class="eyebrow">MỞ RỘNG THƯ VIỆN</div><h1>Thêm sách mới</h1><p class="muted">Điền thông tin để đưa một đầu sách vào thư viện.</p></div></div>
+<section class="panel form-panel"><form asp-action="Create" method="post"><partial name="_BookForm" model="Model" /></form></section>

@@ -1,0 +1,9 @@
+**/bin/
+**/obj/
+.dotnet/
+.tools/
+**/.keys/
+**/*.db
+**/*.db-shm
+**/*.db-wal
+BookManager-source.zip

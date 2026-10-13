@@ -1,0 +1,4 @@
+@model Book
+@{ ViewData["Title"]=Model.Title; }
+<a class="back" asp-action="Index">← Danh mục sách</a><div class="page-heading"><div><div class="eyebrow">CHI TIẾT ĐẦU SÁCH</div><h1>@Model.Title</h1><p class="muted">@Model.Author</p></div><a class="button primary" asp-action="Edit" asp-route-id="@Model.Id">Chỉnh sửa sách</a></div>
+<section class="panel form-panel"><span class="category-tag">@Model.Category</span><dl class="details"><div><dt>Nhà xuất bản</dt><dd>@(Model.Publisher ?? "Chưa có thông tin")</dd></div><div><dt>Năm xuất bản</dt><dd>@Model.PublishedYear</dd></div><div><dt>Giá bán</dt><dd>@Model.Price.ToString("N0") ₫</dd></div><div><dt>Số lượng</dt><dd>@Model.Quantity cuốn</dd></div></dl><h2>Giới thiệu</h2><p class="description">@(Model.Description ?? "Chưa có mô tả.")</p><div class="form-actions"><a class="button secondary" asp-action="Index">Quay lại</a><a class="button danger" asp-action="Delete" asp-route-id="@Model.Id">Xóa sách</a></div></section>

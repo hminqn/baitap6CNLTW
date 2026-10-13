@@ -1,0 +1,4 @@
+@model Book
+@{ ViewData["Title"]="Xác nhận xóa"; }
+<a class="back" asp-action="Index">← Danh mục sách</a><div class="page-heading"><div><div class="eyebrow">XÁC NHẬN THAO TÁC</div><h1>Xóa sách khỏi thư viện?</h1><p class="muted">Dữ liệu sách sẽ bị xóa vĩnh viễn sau khi xác nhận.</p></div></div>
+<section class="panel form-panel"><h2>@Model.Title</h2><p>@Model.Author · @Model.Category · @Model.PublishedYear</p><p>Số lượng hiện có: <strong>@Model.Quantity cuốn</strong></p><form asp-action="Delete" asp-route-id="@Model.Id" method="post"><div class="form-actions"><a class="button secondary" asp-action="Index">Hủy, giữ lại sách</a><button class="button danger" type="submit">Xác nhận xóa</button></div></form></section>
